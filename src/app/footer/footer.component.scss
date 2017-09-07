@@ -1,0 +1,34 @@
+
+$footerHeight: 85px; // IMPORTANT
+
+footer{
+    // position: fixed;
+    bottom: 0;
+    height: $footerHeight;
+    width: 100%;
+    z-index: 10;
+    margin-top: -50px;
+    background-color: #000000;
+    z-index: -200;
+    position: fixed;
+    padding-top: 12px;
+  .footer-copyright{
+    text-align: right;
+    
+    p {
+      margin: 0;
+      font-size: 10px;
+    }
+  }
+  .footer-contact {
+    p {
+      font-family: "TitilliumWeb-Light";
+      font-size: 10px;
+      margin-bottom: 0;
+    }
+  }
+  .flex-container .flex-item--50{
+    padding: 0;
+  }
+}
+

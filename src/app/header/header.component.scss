@@ -1,0 +1,55 @@
+
+#header{
+  height: 100%;
+  width: 100%;
+  // background: url("../img/bg.jpg");
+  // background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 70%!important;
+  position: relative;
+  z-index: 20;
+
+  .brand-text{
+    position: absolute;
+    width: 100%;
+    font-family: "TitilliumWeb-Light";
+    top: 55%;
+    text-align: center;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 18px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+  }
+  h1, p {
+    margin: 5px;
+  }
+  h1 {
+    font-size: 40px;
+    letter-spacing: 15px;
+  }
+  p {
+    margin-top: 12px;
+    font-size: 15px;
+    letter-spacing: 8px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  #header{
+    h1, p {
+      margin: 5px;
+    }
+    h1 {
+      font-size: 55px;
+      letter-spacing:20px;
+    }
+    p {
+      margin-top: 12px;
+      font-size: 20px;
+      letter-spacing: 8px;
+    }
+  }
+}
+

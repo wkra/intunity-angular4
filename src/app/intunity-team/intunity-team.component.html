@@ -1,0 +1,41 @@
+<section id="intunity-team" class="bg-white">
+  <div class="container">
+    <div class="row"><h1 class="underline">intunity team</h1></div>
+    <div class="row intunityTeamContent" >
+      <ng-container *ngFor="let person of intunityTeam">
+        <div  class="city" *ngIf="currentCity != person.city; else setCurrCity(person.city)">
+          <h2>{{person.city}}</h2>
+        </div>
+        <div class="person" >
+          <div class="person--photo" >
+            <img src="./assets/img/{{person.url}}/{{person.smallphoto}}" alt="{{person.name}}" class="img-responsive">
+          </div>
+          <div class="person--name" >
+            <h3>{{person.name}}</h3>
+            <h4>{{person.instrument}}</h4>
+            <h5 
+              class="read-more" 
+              *ngIf="person.text !== ''"
+              (click)="person.isActive = !person.isActive"
+            >
+              {{person.isActive ? "zwiń..." : "więcej..."}}
+            </h5>
+          </div>
+        </div>
+        <div 
+          class="person-text"
+          [ngClass]="{'person-text-opened': person.isActive}"
+          *ngIf="person.isActive"
+        >
+          <h2>{{person.name}}</h2>
+          <img 
+            src="./assets/img/{{person.url}}/{{person.bigphoto}}" 
+            alt="{{person.name}}" 
+            class="img-responsive"
+            *ngIf="person.bigphoto !== ''">
+          <span [innerHTML]="person.text"></span>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

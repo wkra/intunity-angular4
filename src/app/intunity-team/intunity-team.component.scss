@@ -1,0 +1,125 @@
+
+ .intunityTeamContent{
+   display: flex;
+   flex-wrap: wrap;
+ }
+  .city{
+    padding: 20px 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    h2{
+      width: 100%;
+    }
+  }
+  .person{
+    $padding-top-bottom: 20px;
+    padding-top: $padding-top-bottom;
+    padding-bottom: $padding-top-bottom;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  .person--photo{
+    width: 30%;
+    transition: 1s all;
+    img {
+      border-radius: 50px; 
+      margin: auto;
+      box-shadow: 0 0 6px 0px #878787;
+    }
+    &:hover{
+      transform: scale(0.98);
+    }
+  }
+  .person--name{
+    box-sizing: border-box;
+    width: 70%;
+    padding-left: 15px;
+  }
+  h5{
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .person-text{
+    overflow: hidden;
+    transition: 2s opacity;
+    opacity: 0;
+    img {
+      float: none;
+      padding-left: 15px;
+      padding-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .person-text-opened{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    opacity: 1;
+    animation-name: personTextAnim;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    img {
+      transition: 1s all;
+      opacity: 0.8;
+    }
+
+    img:hover{
+      opacity: 1;
+    }
+  }
+  .person-opened{
+    width: 100%;
+  }
+
+@media (min-width: 768px) {
+  #intunity-team{
+    .city{
+      padding: 20px 0;
+    }
+    .person{
+      margin-left: 0;
+      margin-right: 0;
+      width: 50%;
+    }
+    .person--photo{
+      width: 25%;
+    }
+    .person--name{
+      width: 75%;
+    }
+    .person-text-opened{
+      width: 100%;
+      margin-left: auto;
+    }
+    .person-text{
+      img {
+        float: right;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+    }
+  }
+}
+
+@keyframes personTextAnim {
+  from {
+    opacity: 0;
+    }
+  to {
+    opacity: 1;
+    }
+}

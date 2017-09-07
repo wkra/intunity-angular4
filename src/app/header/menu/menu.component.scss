@@ -1,0 +1,73 @@
+$menuTekstColor: #ffffff;
+$white: #ffffff;
+$gold: #e39e1b;
+
+.nav li a {
+  font-size: 16px;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background: none;
+    background-color: transparent;
+}
+.navbar-header {
+  a {
+    font-weight: lighter;
+    font-size: 28px;
+    color: $gold;
+  }
+  a::before{
+    content: "";
+    height: 1px;
+    border-radius: 2px;
+    // width: 106px;
+    background-color: $gold;
+    position: absolute;
+    transform: translateY(25px);
+    animation-name: brandAnimation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav {
+    float: none;
+}
+}
+$hamburgerColor: #ffffff;
+
+/* HAMBURGER */
+
+.navbar-toggle {
+  overflow: hidden;
+
+  .icon-bar {
+    transition: opacity, transform;
+    transition-duration: 600ms;
+  }
+}
+
+.navbar-toggle:not(.collapsed) {
+
+  .icon-bar:nth-child(2) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .icon-bar:nth-child(3) {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .icon-bar:nth-child(4) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+.navbar-toggle .icon-bar {
+  background-color: $hamburgerColor!important;
+}
+
+
+/* hamburger end */
